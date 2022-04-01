@@ -31,6 +31,19 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src"
   },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --ext .tsx --ext .ts ./src --fix"
+    ],
+    "./src/**": [
+      "prettier --write ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -55,6 +68,7 @@
     "eslint": "^8.12.0",
     "eslint-plugin-functional": "^4.2.0",
     "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.4",
     "prettier": "^2.6.1"
   }
 }
