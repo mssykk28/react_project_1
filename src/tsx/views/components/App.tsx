@@ -1,6 +1,6 @@
-import React from "react";
-import logo from "../../../img/logo.svg";
-import "../../style/components/App.css";
+import React from "react"
+import logo from "../../../img/logo.svg"
+import "../../style/components/App.css"
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
